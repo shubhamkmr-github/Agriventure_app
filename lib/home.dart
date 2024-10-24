@@ -277,7 +277,7 @@ class HomePage extends StatelessWidget {
                             name: postcardName,
                             location: postcardLocation,
                             description:
-                            'Visit the beautiful beaches and resorts.',
+                            'Book your stay now for a raw authentic rural experience.',
                           ),
                         ),
                       );

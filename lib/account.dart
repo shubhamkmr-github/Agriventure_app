@@ -1,3 +1,4 @@
+import 'package:agriventure/wishlist.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -6,6 +7,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Profile'),
+        backgroundColor: Color(0xFF4CAF50), // Match your primary color
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -15,7 +17,7 @@ class ProfileScreen extends StatelessWidget {
               // Profile Picture
               CircleAvatar(
                 radius: 60,
-                backgroundImage: AssetImage('assets/profile_picture.jpg'),
+                backgroundImage: AssetImage('assets/profile.jpg'),
               ),
               SizedBox(height: 16),
 
@@ -32,7 +34,7 @@ class ProfileScreen extends StatelessWidget {
               // Bio
               Text(
                 'Travel enthusiast, foodie, and nature lover. '
-                'Exploring the world one destination at a time!',
+                    'Exploring the world one destination at a time!',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,
@@ -44,27 +46,41 @@ class ProfileScreen extends StatelessWidget {
               // Divider
               Divider(thickness: 2),
 
-              // Profile Options (Edit Profile, Saved Trips, Logout)
-              ListTile(
-                leading: Icon(Icons.edit, color: Colors.green),
-                title: Text('Edit Profile'),
-                trailing: Icon(Icons.arrow_forward_ios),
+              // Profile Options
+              ProfileOptionTile(
+                icon: Icons.edit,
+                title: 'Edit Profile',
                 onTap: () {
                   // Add edit profile logic here
                 },
               ),
-              ListTile(
-                leading: Icon(Icons.favorite, color: Colors.red),
-                title: Text('Saved Trips'),
-                trailing: Icon(Icons.arrow_forward_ios),
+              ProfileOptionTile(
+                icon: Icons.favorite,
+                title: 'Saved Trips',
                 onTap: () {
                   // Add saved trips logic here
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => WishlistScreen()),);
                 },
               ),
-              ListTile(
-                leading: Icon(Icons.logout, color: Colors.black),
-                title: Text('Logout'),
-                trailing: Icon(Icons.arrow_forward_ios),
+              ProfileOptionTile(
+                icon: Icons.settings,
+                title: 'Settings',
+                onTap: () {
+                  // Navigate to settings page
+                },
+              ),
+              ProfileOptionTile(
+                icon: Icons.analytics,
+                title: 'User Statistics',
+                onTap: () {
+                  // Show user statistics
+                },
+              ),
+              ProfileOptionTile(
+                icon: Icons.logout,
+                title: 'Logout',
                 onTap: () {
                   // Add logout logic here
                 },
@@ -72,6 +88,33 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+// Widget for Profile Options
+class ProfileOptionTile extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final Function() onTap;
+
+  const ProfileOptionTile({
+    required this.icon,
+    required this.title,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: EdgeInsets.symmetric(vertical: 8),
+      elevation: 4,
+      child: ListTile(
+        leading: Icon(icon, color: Color(0xFF4CAF50)), // Match your primary color
+        title: Text(title),
+        trailing: Icon(Icons.arrow_forward_ios),
+        onTap: onTap,
       ),
     );
   }
