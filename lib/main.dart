@@ -2,13 +2,14 @@ import 'package:agriventure/account.dart';
 import 'package:agriventure/home.dart';
 import 'package:agriventure/plan.dart';
 import 'package:agriventure/post.dart';
+import 'package:agriventure/welcome_screen.dart';
 import 'package:agriventure/wishlist.dart';
 import 'package:flutter/material.dart';
 import 'login_signup.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: WelcomeScreen(),
     ));
 
 // Home screen with bottom navigation
