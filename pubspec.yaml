@@ -63,6 +63,12 @@ flutter:
      - assets/munnar.jpg
      - assets/profile.jpg
      - assets/goa.jpg
+     - assets/bali.jpg
+     - assets/manali.jpg
+     - assets/paris.jpg
+     - assets/tokyo.jpg
+     - assets/shimla.jpg
+     - assets/kashmir.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

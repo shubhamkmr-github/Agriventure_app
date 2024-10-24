@@ -30,7 +30,7 @@ class _TripDetailsScreenState extends State<TripDetailsScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(
+            Image.asset(
               widget.imageUrl,
               height: 250,
               width: double.infinity,

@@ -11,8 +11,8 @@ class HomePage extends StatelessWidget {
     },
     {
       'imageUrl': 'assets/goa.jpg',
-      'tripName': 'Goa',
-      'location': 'Goa',
+      'tripName': 'Manglore',
+      'location': 'Karnataka',
     },
     {
       'imageUrl': 'assets/shimla.jpg',
@@ -21,13 +21,13 @@ class HomePage extends StatelessWidget {
     },
     {
       'imageUrl': 'assets/manali.jpg',
-      'tripName': 'Manali',
-      'location': 'Himachal Pradesh',
+      'tripName': 'Bhopal',
+      'location': 'Madhya Pradesh',
     },
     {
       'imageUrl': 'assets/kashmir.jpg',
-      'tripName': 'Kashmir',
-      'location': 'Jammu & Kashmir',
+      'tripName': 'Shillong',
+      'location': 'Meghalaya',
     },
   ];
 
@@ -35,18 +35,18 @@ class HomePage extends StatelessWidget {
   final List<Map<String, String>> nextTrips = [
     {
       'imageUrl': 'assets/bali.jpg',
-      'tripName': 'Bali',
-      'location': 'Indonesia',
+      'tripName': 'Nagpur',
+      'location': 'Maharashtra',
     },
     {
       'imageUrl': 'assets/paris.jpg',
-      'tripName': 'Paris',
-      'location': 'France',
+      'tripName': 'Kutch',
+      'location': 'Gujarat',
     },
     {
       'imageUrl': 'assets/tokyo.jpg',
-      'tripName': 'Tokyo',
-      'location': 'Japan',
+      'tripName': 'Udupi',
+      'location': 'Karnataka',
     },
   ];
 
@@ -283,7 +283,7 @@ class HomePage extends StatelessWidget {
                       );
                     },
                     child: Container(
-                      height: 250, // Adjust height for the rectangular shape
+                      height: 300, //250  // Adjust height for the rectangular shape
                       margin: EdgeInsets.symmetric(vertical: 8),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
